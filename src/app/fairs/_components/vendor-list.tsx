@@ -2,21 +2,39 @@
 
 import { Input } from "@//components/ui/input"
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@//components/ui/table"
-import type { Vendor } from "@//types/fair"
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
+import type { VendorDetail } from "@/types/vendor"
+import { useRouter } from "next/navigation"
 import { useState } from "react"
 
 interface VendorListProps {
-	vendors: Vendor[]
+	vendors: VendorDetail[]
 }
 
 export function VendorList({ vendors }: VendorListProps) {
 	const [searchTerm, setSearchTerm] = useState("")
+	const router = useRouter()
 
 	const filteredVendors = vendors.filter((vendor) => vendor.businessName.toLowerCase().includes(searchTerm.toLowerCase()))
 
 	return (
 		<div className="space-y-4">
-			<Input placeholder="Search vendors..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} className="max-w-sm" />
+			<div className="flex flex-row justify-between gap-4">
+				<Input placeholder="Search vendors..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} className="max-w-sm" />
+				<Select name="fairId" required defaultValue="all">
+					<SelectTrigger className="max-w-xs">
+						<SelectValue placeholder="Category" />
+					</SelectTrigger>
+					<SelectContent>
+						<SelectItem value="all">All Categories</SelectItem>
+						<SelectItem value="food">Food & Beverages</SelectItem>
+						<SelectItem value="crafts">Arts & Crafts</SelectItem>
+						<SelectItem value="retail">Retail</SelectItem>
+						<SelectItem value="services">Services</SelectItem>
+						<SelectItem value="other">Other</SelectItem>
+					</SelectContent>
+				</Select>
+			</div>
 			<div className="rounded-md border">
 				<Table>
 					<TableHeader>
@@ -24,18 +42,14 @@ export function VendorList({ vendors }: VendorListProps) {
 							<TableHead>Booth</TableHead>
 							<TableHead>Business Name</TableHead>
 							<TableHead>Type</TableHead>
-							<TableHead>Space</TableHead>
-							<TableHead>Contact</TableHead>
 						</TableRow>
 					</TableHeader>
 					<TableBody>
 						{filteredVendors.map((vendor) => (
-							<TableRow key={vendor.id}>
+							<TableRow className="cursor-pointer" onClick={() => router.push(`/vendors/${vendor.id}`)} key={vendor.id}>
 								<TableCell className="font-medium">{vendor.boothNumber}</TableCell>
 								<TableCell>{vendor.businessName}</TableCell>
 								<TableCell className="capitalize">{vendor.type}</TableCell>
-								<TableCell>{vendor.location.space}</TableCell>
-								<TableCell>{vendor.contactEmail}</TableCell>
 							</TableRow>
 						))}
 					</TableBody>

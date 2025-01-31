@@ -78,13 +78,13 @@ export function FairCalendar({ fair }: FairCalendarProps) {
 	return (
 		<div className="space-y-8">
 			{days.map((day) => (
-				<div key={day.toISOString()} className="space-y-4">
-					<h3 className="font-semibold text-lg">{format(day, "EEEE, MMMM d, yyyy")}</h3>
+				<div key={day.toISOString()} className="space-y-3">
+					<h3 className="font-semibold text-lg text-muted-foreground">{format(day, "EEEE, MMMM d, yyyy")}</h3>
 					<div className="grid gap-4">
 						{schedule[format(day, "yyyy-MM-dd")]?.map((event) => (
 							<Card key={event.description}>
 								<CardContent className="flex gap-4 p-4">
-									<div className="flex-shrink-0 font-medium text-sm">{event.time}</div>
+									<div className="flex-shrink-0 font-medium text-muted-foreground text-sm">{event.time}</div>
 									<div>
 										<h4 className="font-medium">{event.title}</h4>
 										<p className="text-muted-foreground text-sm">{event.description}</p>

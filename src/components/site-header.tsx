@@ -55,7 +55,7 @@ const vendors = [
 
 export function SiteHeader() {
 	return (
-		<header className="sticky top-0 z-50 flex w-full justify-center border-b bg-background/95 px-4 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+		<header className="sticky top-0 z-50 flex w-full justify-center border-b bg-background px-4">
 			<div className="container flex h-16 items-center">
 				<MainNav />
 				<NavigationMenu className="hidden md:flex">
@@ -113,7 +113,7 @@ export function SiteHeader() {
 				<div className="flex flex-1 items-center justify-end space-x-4">
 					<nav className="flex items-center space-x-2">
 						<Button asChild variant="default" className="hidden md:inline-flex">
-							<Link href="/vendors/apply">Become a Vendor</Link>
+							<Link href="/auth/sign-in">Sign in</Link>
 						</Button>
 						<Sheet>
 							<SheetTrigger asChild>
@@ -203,7 +203,7 @@ const ListItem = React.forwardRef<React.ElementRef<"a">, React.ComponentPropsWit
 				<a
 					ref={ref}
 					className={cn(
-						"block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+						"block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-muted focus:bg-muted",
 						className
 					)}
 					{...props}
