@@ -10,6 +10,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { useState } from "react"
 import { Checkbox } from "@/components/ui/checkbox"
 import Link from "next/link"
+import { Slider } from "@/components/ui/slider"
 
 interface Fair {
 	id: number
@@ -24,6 +25,7 @@ interface VendorReservationFormProps {
 // TODO: Add certificate upload as required
 export default function VendorReservationForm({ fairs }: VendorReservationFormProps) {
 	const [tab, setTab] = useState("start")
+	const [lenght, setLength] = useState(3)
 
 	return (
 		<Tabs value={tab} className="flex w-full flex-col items-center space-y-4" onValueChange={(e) => setTab(e)}>
@@ -159,18 +161,8 @@ export default function VendorReservationForm({ fairs }: VendorReservationFormPr
 								</Select>
 							</div>
 							<div className="grid gap-2">
-								<Label htmlFor="spaceNeeded">Veľkosť stánku</Label>
-								<Select name="spaceNeeded" required>
-									<SelectTrigger>
-										<SelectValue placeholder="Vyberte velkosť stánku" />
-									</SelectTrigger>
-									<SelectContent>
-										<SelectItem value="small">Malý (2.5m)</SelectItem>
-										<SelectItem value="medium">Stredný (3.5m)</SelectItem>
-										<SelectItem value="large">Veľký (5m)</SelectItem>
-										<SelectItem value="custom">Custom Size</SelectItem>
-									</SelectContent>
-								</Select>
+								<Label htmlFor="spaceNeeded">Dĺžka stánku ({lenght} m)</Label>
+								<Slider min={1} max={10} defaultValue={[3]} step={1} onValueChange={(e) => setLength(e[0])} />
 							</div>
 							<div className="grid gap-2">
 								<Label>Požiadavky</Label>
