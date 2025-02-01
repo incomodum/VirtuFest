@@ -22,16 +22,19 @@ interface VendorReservationFormProps {
 	fairs: Fair[]
 }
 
+// TODO: Add certificate upload as required
 export default function VendorReservationForm({ fairs }: VendorReservationFormProps) {
 	//   const { toast } = useToast()
-	const [tab, setTab] = useState("basic-info")
+	const [tab, setTab] = useState("start")
 
 	return (
 		<Tabs value={tab} className="flex w-full flex-col items-center space-y-4" onValueChange={(e) => setTab(e)}>
-			<TabsList>
-				<TabsTrigger value="basic-info">Základné informácie</TabsTrigger>
-				<TabsTrigger value="stall">Stánok</TabsTrigger>
-			</TabsList>
+			{tab !== "start" && (
+				<TabsList>
+					<TabsTrigger value="basic-info">Základné informácie</TabsTrigger>
+					<TabsTrigger value="stall">Stánok</TabsTrigger>
+				</TabsList>
+			)}
 			<Card className="w-[90%] md:w-[600px]">
 				<CardContent className="m-0 p-6 pt-4 md:p-8 md:pt-6">
 					<form
@@ -46,6 +49,31 @@ export default function VendorReservationForm({ fairs }: VendorReservationFormPr
 						}}
 						className="flex flex-col gap-4"
 					>
+						<TabsContent className="flex flex-col items-center gap-4" value="start">
+							<p className="w-full text-center font-bold text-2xl">Upozornenie</p>
+							<p className="text-center">
+								Na registráciu stánkara budete
+								<br className="md:hidden" /> potrebovať tieto dokumenty
+							</p>
+							<ul className="w-full list-inside list-decimal">
+								<li>
+									Výpis z{" "}
+									<a
+										className="underline hover:text-[#00B975]"
+										href="https://www.orsr.sk/search_subjekt.asp"
+										target="_blank"
+										rel="noreferrer"
+									>
+										ORSR
+									</a>
+								</li>
+								<li>Doklad preukazujúci splnenie požiadaviek na predaj výrobkov a poskytovanie služieb podľa osobitných predpisov</li>
+								<li>Kód VRP a vzor pokladničného dokladu</li>
+							</ul>
+							<Button type="button" onClick={() => setTab("basic-info")} className="w-full bg-[#00B975] hover:bg-[#009861]">
+								Pokračovať
+							</Button>
+						</TabsContent>
 						<TabsContent className="flex flex-col gap-4" value="basic-info">
 							<div className="grid gap-2">
 								<Label htmlFor="name">Obchodné meno</Label>
@@ -68,6 +96,14 @@ export default function VendorReservationForm({ fairs }: VendorReservationFormPr
 							<div className="grid gap-2">
 								<Label htmlFor="email">Email</Label>
 								<Input id="email" name="email" type="email" autoComplete="email" required />
+							</div>
+							<div className="grid gap-2">
+								<Label htmlFor="orsr">Výpis z ORSR</Label>
+								<Input id="orsr" name="orsr" type="file" required />
+							</div>
+							<div className="grid gap-2">
+								<Label htmlFor="orsr">Doklady oprávnenia činnosti</Label>
+								<Input id="orsr" name="orsr" type="file" required />
 							</div>
 							<div className="items-top flex space-x-2">
 								<Checkbox id="tzp" className="data-[state=checked]:bg-[#00B975]" />
@@ -105,7 +141,7 @@ export default function VendorReservationForm({ fairs }: VendorReservationFormPr
 								<Label htmlFor="businessType">Typ sortimentu</Label>
 								<Select name="businessType" required>
 									<SelectTrigger>
-										<SelectValue placeholder="Sortiment" />
+										<SelectValue placeholder="Vyberte sortiment" />
 									</SelectTrigger>
 									<SelectContent>
 										<SelectItem value="food">Občerstvenie</SelectItem>

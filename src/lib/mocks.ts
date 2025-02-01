@@ -8,8 +8,8 @@ export const vendors: VendorDetail[] = [
 		description:
 			"Špecializujeme sa na ručne vyrábanú keramiku a hrnčiarstvo, vytvárame jedinečné kúsky, ktoré prinášajú krásu do každodenného života. Každý výrobok je starostlivo vytvorený tradičnými technikami, ktoré sa odovzdávajú z pokolenia na pokolenie.",
 		type: "Umenie a remeslá",
-		ownerName: "Sarah Johnson",
-		email: "sarah@remeselnedielne.sk",
+		ownerName: "Peter Kováč",
+		email: "peter.kovac@remeselnedielne.sk",
 		phone: "(555) 123-4567",
 		website: "https://remeselnedielne.sk",
 		socialMedia: {
@@ -94,8 +94,8 @@ export const vendors: VendorDetail[] = [
 		description:
 			"Vyrábame ručne vyrezávané drevené predmety, od dekorácií po praktické domáce potreby. Každý kus je unikátny a nesie v sebe kúsok prírody. Naše výrobky sú vyrábané s láskou k drevu a tradíciám.",
 		type: "Umenie a remeslá",
-		ownerName: "Peter Kováč",
-		email: "peter@drevenecary.sk",
+		ownerName: "Martin Bárta",
+		email: "martin.barta@drevenecary.sk",
 		phone: "(555) 234-5678",
 		website: "https://drevenecary.sk",
 		socialMedia: {
@@ -154,7 +154,7 @@ export const vendors: VendorDetail[] = [
 			"Šijeme ručne vyrobené textilné výrobky, ako sú vrecká, obaly na knihy, dekorácie a oblečenie. Každý kus je vytvorený s dôrazom na kvalitu a jedinečný dizajn. Naše výrobky sú ideálne pre tých, ktorí hľadajú niečo špeciálne.",
 		type: "Umenie a remeslá",
 		ownerName: "Eva Horváthová",
-		email: "eva@platnonit.sk",
+		email: "horvathova@platnonit.sk",
 		phone: "(555) 345-6789",
 		website: "https://platnonit.sk",
 		socialMedia: {
@@ -222,8 +222,7 @@ export const upcomingFairs: FairDetail[] = [
 		city: "Revúca",
 		vendors,
 		endDate: "",
-		hours: "",
-		parkingInfo: "",
+		parkingInfo: "Ulica Sládkovičová",
 		vendorCount: 70
 	},
 	{
@@ -239,8 +238,7 @@ export const upcomingFairs: FairDetail[] = [
 		city: "Revúca",
 		vendors,
 		endDate: "",
-		hours: "",
-		parkingInfo: "",
+		parkingInfo: "Pri Tescu",
 		vendorCount: 70
 	},
 	{
@@ -256,8 +254,7 @@ export const upcomingFairs: FairDetail[] = [
 		city: "Revúca",
 		vendors,
 		endDate: "",
-		hours: "",
-		parkingInfo: "",
+		parkingInfo: "Sládkovičová a Tesco",
 		vendorCount: 70
 	}
 ] satisfies FairDetail[]

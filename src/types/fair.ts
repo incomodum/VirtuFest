@@ -11,7 +11,6 @@ export interface FairDetail {
 	vendorSpaces: number
 	expectedAttendance: number
 	vendors: VendorDetail[]
-	hours: string
 	parkingInfo: string
 	featured: boolean
 	city: string

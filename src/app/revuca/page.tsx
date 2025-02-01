@@ -7,6 +7,20 @@ import { CalendarDays, MapPin, Users, Store } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import LogoRevuca from "../_components/logo-revuca"
+import type { Metadata } from "next/types"
+
+export const metadata: Metadata = {
+	title: "VirtuFest | Revúca",
+	description: "Virtuálna dvojička podujatí v Revúcej",
+	openGraph: {
+		type: "website",
+		title: "VirtuFest | Revúca",
+		description: "Virtuálna dvojička podujatí v Revúcej"
+	},
+	twitter: {
+		card: "summary_large_image"
+	}
+}
 
 export default function Page() {
 	return (
@@ -29,6 +43,23 @@ export default function Page() {
 					<section className="relative">
 						<div className="absolute inset-0 z-0">
 							<Image src="/placeholder.svg" alt="City fair background" fill className="object-cover brightness-50" priority />
+						</div>
+					</section>
+
+					<section className="relative flex justify-center bg-muted px-4">
+						<div className="container flex flex-col items-center gap-8 pt-12 pb-8 lg:flex-row">
+							<div className="flex aspect-video w-full items-center justify-center md:justify-end lg:w-1/2">
+								<Image src="/revuca-erb.png" alt="Hero Image" width={325} height={525} className="rounded-lg object-cover" priority />
+							</div>
+							<div className="flex flex-col items-start space-y-4 lg:w-1/2">
+								<h1 className="font-bold text-4xl tracking-tight lg:text-6xl">Mesto Revúca</h1>
+								<p className="text-lg text-muted-foreground">Slovenské mesto kultúry 2022</p>
+								<Link href="https://www.revuca.sk/" target="_blank">
+									<Button size="lg" className="mt-4">
+										Webové sídlo
+									</Button>
+								</Link>
+							</div>
 						</div>
 					</section>
 

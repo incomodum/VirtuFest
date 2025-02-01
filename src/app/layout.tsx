@@ -15,11 +15,11 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
 	title: "VirtuFest",
-	description: "Your virtual fair and event companion",
+	description: "Váš virtuálny trh a spoločník podujatí",
 	openGraph: {
 		type: "website",
 		title: "VirtuFest",
-		description: "Your virtual fair and event companion"
+		description: "Váš virtuálny trh a spoločník podujatí"
 	},
 	twitter: {
 		card: "summary_large_image"

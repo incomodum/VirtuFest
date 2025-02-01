@@ -1,4 +1,4 @@
-import { CalendarDays, Clock, MapPin, ParkingMeterIcon as Parking, Users } from "lucide-react"
+import { CalendarDays, MapPin, ParkingMeterIcon as Parking, Users } from "lucide-react"
 import { VendorMap } from "../_components/vendor-map"
 import { VendorList } from "../_components/vendor-list"
 import { FairCalendar } from "../_components/fair-calendar"
@@ -51,13 +51,6 @@ export default async function DataPage({ params }: { params: Promise<{ id: strin
 											</div>
 										</div>
 										<div className="flex items-center gap-2">
-											<Clock className="h-5 w-5 text-muted-foreground" />
-											<div>
-												<p className="font-medium">Hodiny</p>
-												<p className="text-muted-foreground text-sm">{data.hours}</p>
-											</div>
-										</div>
-										<div className="flex items-center gap-2">
 											<MapPin className="h-5 w-5 text-muted-foreground" />
 											<div>
 												<p className="font-medium">Lokalita</p>
@@ -76,7 +69,7 @@ export default async function DataPage({ params }: { params: Promise<{ id: strin
 										<div className="flex items-center gap-2">
 											<Parking className="h-5 w-5 text-muted-foreground" />
 											<div>
-												<p className="font-medium">Parking</p>
+												<p className="font-medium">Parkovanie</p>
 												<p className="text-muted-foreground text-sm">{data.parkingInfo}</p>
 											</div>
 										</div>
@@ -120,7 +113,7 @@ export default async function DataPage({ params }: { params: Promise<{ id: strin
 							</Card> */}
 							<Card>
 								<CardHeader>
-									<CardTitle>Kalendár</CardTitle>
+									<CardTitle>Harmonogram</CardTitle>
 								</CardHeader>
 								<CardContent>
 									<FairCalendar />

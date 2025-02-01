@@ -36,8 +36,8 @@ export default async function VendorDetailPage({ params }: { params: Promise<{ i
 						</div>
 
 						{/* Image Gallery */}
-						<div className="flex w-full flex-col gap-4 sm:flex-row">
-							<div className="relative h-[500px] w-full flex-grow overflow-hidden rounded-lg sm:w-auto">
+						<div className="flex min-h-[500px] w-full flex-col gap-4 sm:min-h-[500px] sm:flex-row">
+							<div className="relative h-[500px] w-full flex-grow overflow-hidden rounded-lg">
 								<Image
 									src={data.images[0] || "/placeholder.svg"}
 									alt={`${data.businessName} product 1`}
@@ -45,10 +45,12 @@ export default async function VendorDetailPage({ params }: { params: Promise<{ i
 									className="object-cover"
 								/>
 							</div>
-							<div className="flex h-full flex-row justify-between sm:h-[500px] sm:flex-col">
+							<div className="flex w-full flex-row justify-between gap-4 sm:h-[500px] sm:w-fit sm:flex-col">
 								{data.images.slice(1, 4).map((image, index) => (
-									// biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
-									<div key={index} className="relative aspect-square h-[145px] overflow-hidden rounded-lg sm:h-[155px]">
+									<div
+										key={image}
+										className="relative aspect-square h-auto w-1/3 overflow-hidden rounded-lg sm:h-[155px] sm:w-full"
+									>
 										<Image
 											src={image || "/placeholder.svg"}
 											alt={`${data.businessName} product ${index + 2}`}
@@ -94,11 +96,12 @@ export default async function VendorDetailPage({ params }: { params: Promise<{ i
 						</Card>
 						<Card>
 							<CardHeader>
-								<CardTitle>Nadchádzajúce jarmoky</CardTitle>
+								<CardTitle>Najblyžšie podujatie</CardTitle>
 							</CardHeader>
 							<CardContent className="space-y-4">
 								{data.events
 									.filter((event) => event.status === "upcoming")
+									.slice(0, 1)
 									.map((event) => (
 										<div key={event.id} className="space-y-2">
 											<h3 className="font-medium">{event.fairName}</h3>
@@ -110,7 +113,7 @@ export default async function VendorDetailPage({ params }: { params: Promise<{ i
 												<MapPin className="size-4" />
 												{event.location}
 											</div>
-											<Button variant="outline" asChild className="w-full">
+											<Button asChild className="w-full bg-[#00B975] hover:bg-[#009861]">
 												<Link href={`/fairs/${event.fairId}`}>Zobraziť detaily o udalosti</Link>
 											</Button>
 										</div>

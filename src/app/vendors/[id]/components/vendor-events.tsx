@@ -16,9 +16,9 @@ export function VendorEvents({ events }: VendorEventsProps) {
 		<div className="space-y-6">
 			{/* Upcoming Events */}
 			<div className="space-y-4">
-				<h3 className="font-semibold text-lg">Upcoming Events</h3>
+				<h3 className="font-semibold text-lg">Nadchádzajúce události</h3>
 				{upcomingEvents.length === 0 ? (
-					<p className="text-muted-foreground">No upcoming events scheduled.</p>
+					<p className="text-muted-foreground">Nie sú naplánované žiadne nadchádzajúce udalosti.</p>
 				) : (
 					<div className="grid gap-4 sm:grid-cols-2">
 						{upcomingEvents.map((event) => (
@@ -27,7 +27,7 @@ export function VendorEvents({ events }: VendorEventsProps) {
 									<div className="space-y-2">
 										<div className="flex items-center justify-between">
 											<h4 className="font-medium">{event.fairName}</h4>
-											<Badge className="bg-[#00B975]">Booth {event.boothNumber}</Badge>
+											<Badge className="bg-[#00B975] hover:bg-[#009861]">Stánok {event.boothNumber}</Badge>
 										</div>
 										<div className="flex items-center gap-2 text-muted-foreground text-sm">
 											<Calendar className="h-4 w-4" />
@@ -38,7 +38,7 @@ export function VendorEvents({ events }: VendorEventsProps) {
 											{event.location}
 										</div>
 										<Link href={`/fairs/${event.fairId}`} className="text-[#00B975] text-sm hover:underline">
-											View Fair Details
+											Zobraziť podrobnosti
 										</Link>
 									</div>
 								</CardContent>
@@ -50,9 +50,9 @@ export function VendorEvents({ events }: VendorEventsProps) {
 
 			{/* Past Events */}
 			<div className="space-y-4">
-				<h3 className="font-semibold text-lg">Past Events</h3>
+				<h3 className="font-semibold text-lg">Minulé udalosti</h3>
 				{pastEvents.length === 0 ? (
-					<p className="text-muted-foreground">No past events.</p>
+					<p className="text-muted-foreground">Žiadne minulé udalosti.</p>
 				) : (
 					<div className="grid gap-4 sm:grid-cols-2">
 						{pastEvents.map((event) => (
@@ -61,7 +61,9 @@ export function VendorEvents({ events }: VendorEventsProps) {
 									<div className="space-y-2">
 										<div className="flex items-center justify-between">
 											<h4 className="font-medium">{event.fairName}</h4>
-											<Badge variant="secondary" className="bg-[#00B97566]">Booth {event.boothNumber}</Badge>
+											<Badge variant="secondary" className="bg-[#00B97566] hover:bg-[#00B97533]">
+												Stánok {event.boothNumber}
+											</Badge>
 										</div>
 										<div className="flex items-center gap-2 text-muted-foreground text-sm">
 											<Calendar className="h-4 w-4" />
@@ -71,8 +73,8 @@ export function VendorEvents({ events }: VendorEventsProps) {
 											<MapPin className="h-4 w-4" />
 											{event.location}
 										</div>
-										<Link href={`/fairs/${event.fairId}`} className="text-primary text-sm hover:underline">
-											View Fair Details
+										<Link href={`/fairs/${event.fairId}`} className="text-[#00B975] text-sm hover:underline">
+											Zobraziť podrobnosti
 										</Link>
 									</div>
 								</CardContent>

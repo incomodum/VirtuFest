@@ -1,12 +1,35 @@
 import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import SiteFooter from "@/components/site-footer"
 import { SiteHeader } from "@/components/site-header"
 import { upcomingFairs } from "@/lib/mocks"
-import { CalendarDays, MapPin, Users, Store } from "lucide-react"
+import { CalendarDays, MapPin, Calendar, Globe2, Store, Users } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import Logo from "./_components/logo"
+
+const features = [
+	{
+		icon: Globe2,
+		title: "Celoštátne pokrytie",
+		description: "Spojte sa s stánkarmi vo viacerých mestách"
+	},
+	{
+		icon: Calendar,
+		title: "Jednoduché plánovanie",
+		description: "Nájdite a rezervujte si svoje miesto na nadchádzajúcich událostiach pomocou nášho efektívneho kalendára."
+	},
+	{
+		icon: Users,
+		title: "Riadené komunitou",
+		description: "Postavené na spätnej väzbe od stánkarov, organizátorov a náševníkov, aby vyhovovali skutočným potrebám."
+	},
+	{
+		icon: Store,
+		title: "Správa stánkarov",
+		description: "Nástroje pre predajcov na správu ich prítomnosti a rezervácií."
+	}
+]
 
 export default function Page() {
 	return (
@@ -30,9 +53,31 @@ export default function Page() {
 							</div>
 						</div>
 					</section>
-					<section className="relative">
-						<div className="absolute inset-0 z-0">
-							<Image src="/placeholder.svg" alt="City fair background" fill className="object-cover brightness-50" priority />
+
+					<section className="flex w-full items-center justify-center border-t border-b px-4 py-16">
+						<div className="container">
+							<div className="mx-auto text-center">
+								<h2 className="font-bold text-3xl tracking-tight">Všetko pre kultúrne podujatia na jednom mieste</h2>
+								<p className="mt-4 text-lg text-muted-foreground">
+									Naša platforma poskytuje komplexné nástroje pre mestá, obce, dediny, predajcov a návštevníkov.
+								</p>
+							</div>
+							<div className="mx-auto mt-16 grid max-w-5xl gap-8 sm:grid-cols-2">
+								{features.map((feature) => {
+									const Icon = feature.icon
+									return (
+										<Card key={feature.title}>
+											<CardHeader className="flex h-full flex-col justify-between">
+												<Icon className="h-8 w-8 text-[#00B975]" />
+												<div className="flex flex-col gap-1">
+													<CardTitle className="mt-4">{feature.title}</CardTitle>
+													<CardDescription>{feature.description}</CardDescription>
+												</div>
+											</CardHeader>
+										</Card>
+									)
+								})}
+							</div>
 						</div>
 					</section>
 

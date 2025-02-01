@@ -19,6 +19,14 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { Menu } from "lucide-react"
 import Logo from "@/app/_components/logo"
 
+const locations = [
+	{
+		title: "Revúca",
+		href: "/revuca",
+		description: "Banskobystrický kraj"
+	}
+]
+
 const fairs = [
 	{
 		title: "Nadchádzajúce udalosti",
@@ -62,6 +70,18 @@ export function SiteHeader() {
 				<MainNav />
 				<NavigationMenu className="hidden md:flex">
 					<NavigationMenuList>
+						<NavigationMenuItem>
+							<NavigationMenuTrigger>Miesta</NavigationMenuTrigger>
+							<NavigationMenuContent>
+								<ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+									{locations.map((location) => (
+										<ListItem key={location.title} title={location.title} href={location.href}>
+											{location.description}
+										</ListItem>
+									))}
+								</ul>
+							</NavigationMenuContent>
+						</NavigationMenuItem>
 						<NavigationMenuItem>
 							<NavigationMenuTrigger>Udalosti</NavigationMenuTrigger>
 							<NavigationMenuContent>
