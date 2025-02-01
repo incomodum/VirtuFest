@@ -46,25 +46,8 @@ export default function Page() {
 						</div>
 					</section>
 
-					<section className="relative flex justify-center bg-muted px-4">
-						<div className="container flex flex-col items-center gap-8 pt-12 pb-8 lg:flex-row">
-							<div className="flex aspect-video w-full items-center justify-center md:justify-end lg:w-1/2">
-								<Image src="/revuca-erb.png" alt="Hero Image" width={325} height={525} className="rounded-lg object-cover" priority />
-							</div>
-							<div className="flex flex-col items-start space-y-4 lg:w-1/2">
-								<h1 className="font-bold text-4xl tracking-tight lg:text-6xl">Mesto Revúca</h1>
-								<p className="text-lg text-muted-foreground">Slovenské mesto kultúry 2022</p>
-								<Link href="https://www.revuca.sk/" target="_blank">
-									<Button size="lg" className="mt-4">
-										Webové sídlo
-									</Button>
-								</Link>
-							</div>
-						</div>
-					</section>
-
 					{/* Upcoming Fairs Section */}
-					<section className="flex w-full justify-center px-4 py-16">
+					<section className="flex w-full justify-center border-t px-4 py-16">
 						<div className="container">
 							<h2 className="mb-8 text-center font-bold text-3xl tracking-tight">
 								Nadchádzajúce udalosti v <b>Revúcej</b>
@@ -108,6 +91,23 @@ export default function Page() {
 										</CardContent>
 									</Card>
 								))}
+							</div>
+						</div>
+					</section>
+
+					<section className="relative flex justify-center bg-muted px-4">
+						<div className="container flex flex-col items-center gap-8 pt-12 pb-8 lg:flex-row">
+							<div className="flex aspect-video w-full items-center justify-center md:justify-end lg:w-1/2">
+								<Image src="/revuca-erb.png" alt="Hero Image" width={325} height={525} className="rounded-lg object-cover" priority />
+							</div>
+							<div className="flex flex-col items-start space-y-4 lg:w-1/2">
+								<h1 className="font-bold text-4xl tracking-tight lg:text-6xl">Mesto Revúca</h1>
+								<p className="text-lg text-muted-foreground">Slovenské mesto kultúry 2022</p>
+								<Link href="https://www.revuca.sk/" target="_blank">
+									<Button size="lg" className="mt-4">
+										Webové sídlo
+									</Button>
+								</Link>
 							</div>
 						</div>
 					</section>

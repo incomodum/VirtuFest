@@ -1,16 +1,15 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Textarea } from "@/components/ui/textarea"
-// import { useToast } from "@/components/ui/use-toast"
-import { submitVendorReservation } from "@/actions/vendor-reservation"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { useState } from "react"
 import { Checkbox } from "@/components/ui/checkbox"
+import Link from "next/link"
 
 interface Fair {
 	id: number
@@ -24,7 +23,6 @@ interface VendorReservationFormProps {
 
 // TODO: Add certificate upload as required
 export default function VendorReservationForm({ fairs }: VendorReservationFormProps) {
-	//   const { toast } = useToast()
 	const [tab, setTab] = useState("start")
 
 	return (
@@ -33,24 +31,32 @@ export default function VendorReservationForm({ fairs }: VendorReservationFormPr
 				<TabsList>
 					<TabsTrigger value="basic-info">Základné informácie</TabsTrigger>
 					<TabsTrigger value="stall">Stánok</TabsTrigger>
+					<TabsTrigger value="profile">Profil</TabsTrigger>
 				</TabsList>
 			)}
 			<Card className="w-[90%] md:w-[600px]">
-				<CardContent className="m-0 p-6 pt-4 md:p-8 md:pt-6">
-					<form
-						action={async (formData) => {
-							const result = await submitVendorReservation(formData)
-							if (result.success) {
-								//   toast({
-								//     title: "Success!",
-								//     description: result.message,
-								//   })
-							}
-						}}
-						className="flex flex-col gap-4"
-					>
+				{tab === "basic-info" && (
+					<CardHeader className="w-full">
+						<CardTitle>Základné informácie</CardTitle>
+						<CardDescription>Potrebné informácie na kontrolu legitímnosti</CardDescription>
+					</CardHeader>
+				)}
+				{tab === "stall" && (
+					<CardHeader className="w-full">
+						<CardTitle>Rezervácia miesta</CardTitle>
+						<CardDescription>Potrebné informácie na kontrolu legitímnosti</CardDescription>
+					</CardHeader>
+				)}
+				{tab === "profile" && (
+					<CardHeader className="w-full">
+						<CardTitle>Vytvorenie profilu</CardTitle>
+						<CardDescription>Údaje pre vytvorenie profilu VirtuFest</CardDescription>
+					</CardHeader>
+				)}
+				<CardContent className="m-0">
+					<form className="flex flex-col gap-4">
 						<TabsContent className="flex flex-col items-center gap-4" value="start">
-							<p className="w-full text-center font-bold text-2xl">Upozornenie</p>
+							<p className="mt-6 w-full text-center font-bold text-2xl">Upozornenie</p>
 							<p className="text-center">
 								Na registráciu stánkara budete
 								<br className="md:hidden" /> potrebovať tieto dokumenty
@@ -95,7 +101,7 @@ export default function VendorReservationForm({ fairs }: VendorReservationFormPr
 							</div>
 							<div className="grid gap-2">
 								<Label htmlFor="email">Email</Label>
-								<Input id="email" name="email" type="email" autoComplete="email" required />
+								<Input id="email" name="email" type="email" placeholder="example@gmail.com" autoComplete="email" required />
 							</div>
 							<div className="grid gap-2">
 								<Label htmlFor="orsr">Výpis z ORSR</Label>
@@ -208,8 +214,34 @@ export default function VendorReservationForm({ fairs }: VendorReservationFormPr
 								<Label htmlFor="notes">Dodatočné Info</Label>
 								<Textarea id="notes" name="notes" placeholder="Any special requirements or additional information..." />
 							</div>
-							<Button type="submit" className="w-full bg-[#00B975] hover:bg-[#009861]">
-								Odoslať rezerváciu
+							<Button type="button" onClick={() => setTab("profile")} className="w-full bg-[#00B975] hover:bg-[#009861]">
+								Pokračovať
+							</Button>
+						</TabsContent>
+						<TabsContent className="space-y-4" value="profile">
+							<div className="grid gap-2">
+								<Label htmlFor="email">Verejný kontaktný email</Label>
+								<Input id="email" name="email" type="email" placeholder="example@gmail.com" autoComplete="email" required />
+							</div>
+							<div className="grid gap-2">
+								<Label htmlFor="gallery">Galéria fotiek</Label>
+								<Input id="gallery" name="gallery" type="file" required />
+							</div>
+							<Label>Poznámka</Label>
+							<p className="">Váš profil bude vytvorený po prvom schválení rezervácie miesta a overení dodaných údajov</p>
+							<div className="items-top flex space-x-2">
+								<Checkbox id="gdpr" className="data-[state=checked]:bg-[#00B975]" />
+								<div className="grid gap-1.5 leading-none">
+									<label
+										htmlFor="gdpr"
+										className="font-medium text-sm leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+									>
+										Súhlas so spracovaním osobných údajov
+									</label>
+								</div>
+							</div>
+							<Button asChild type="submit" className="w-full bg-[#00B975] hover:bg-[#009861]">
+								<Link href="/vendors/apply/pay">Odoslať rezerváciu</Link>
 							</Button>
 						</TabsContent>
 					</form>
