@@ -42,20 +42,20 @@ export default async function FairsPage() {
 									<Input placeholder="Hľadať udalosti..." className="min-w-xs pl-8" />
 								</div>
 							</div>
-							<div className="flex w-fit flex-row gap-4">
+							<div className="flex w-full max-w-full flex-row gap-4 md:w-fit">
 								<Select defaultValue="all">
-									<SelectTrigger className="w-[150px]">
+									<SelectTrigger className="min-w-[50px]">
 										<SelectValue placeholder="Category" />
 									</SelectTrigger>
 									<SelectContent>
-										<SelectItem value="all">Všetky kategórie</SelectItem>
+										<SelectItem value="all">Všetky</SelectItem>
 										<SelectItem value="arts">Remeslá</SelectItem>
 										<SelectItem value="food">Občerstvenie</SelectItem>
 										<SelectItem value="market">Trhy</SelectItem>
 									</SelectContent>
 								</Select>
 								<Select defaultValue="upcoming">
-									<SelectTrigger className="w-[150px]">
+									<SelectTrigger className="min-w-[50px]">
 										<SelectValue placeholder="Status" />
 									</SelectTrigger>
 									<SelectContent>

@@ -133,10 +133,10 @@ export function SiteHeader() {
 
 function MainNav() {
 	return (
-		<div className="mr-4 flex">
-			<Link href="/revuca" className="mr-6 flex items-center justify-center gap-2 font-medium">
+		<div className="mr-4 flex w-[192px]">
+			<Link href="/revuca" className="mr-6 flex w-[192px] items-center justify-center gap-2 font-medium">
 				<Logo className="mb-1 h-[20px] w-fit text-primary" />
-				<div className="h-[35px] w-[1px] bg-black" />
+				<div className="h-[35px] w-[1px] min-w-[1px] max-w-[1px] bg-black" />
 				<p className="mb-1 h-[20px] text-[16px]">Revúca</p>
 			</Link>
 		</div>

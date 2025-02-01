@@ -11,7 +11,7 @@ export function FairFilters() {
 	return (
 		<Popover>
 			<PopoverTrigger asChild>
-				<Button variant="outline" className="w-auto">
+				<Button variant="outline" className="w-auto px-4">
 					<Filter className="mr-2 h-4 w-4" />
 					Filtre
 				</Button>

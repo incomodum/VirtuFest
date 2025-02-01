@@ -99,7 +99,7 @@ export default function Payment() {
 										<div className="space-y-1">
 											<p className="text-gray-300 text-xs">Držitel karty</p>
 											<p className="font-mono text-sm">
-												{formData.firstName && formData.lastName ? `${formData.firstName} ${formData.lastName}` : "YOUR NAME"}
+												{formData.firstName || formData.lastName ? `${formData.firstName} ${formData.lastName}` : "MENO"}
 											</p>
 										</div>
 										<div className="space-y-1">
@@ -187,60 +187,30 @@ export default function Payment() {
 								<div className="grid gap-4">
 									<div className="grid gap-4 sm:grid-cols-2">
 										<div className="space-y-2">
-											<Label htmlFor="billingFirstName">Meno</Label>
-											<Input
-												id="billingFirstName"
-												name="billingFirstName"
-												autoComplete="billing given-name"
-												onChange={handleInputChange}
-											/>
+											<Label htmlFor="firstName">Meno</Label>
+											<Input id="firstName" name="firstName" autoComplete="billing given-name" onChange={handleInputChange} />
 										</div>
 										<div className="space-y-2">
-											<Label htmlFor="billingLastName">Priezvisko</Label>
-											<Input
-												id="billingLastName"
-												name="billingLastName"
-												autoComplete="billing family-name"
-												onChange={handleInputChange}
-											/>
+											<Label htmlFor="lastName">Priezvisko</Label>
+											<Input id="lastName" name="lastName" autoComplete="billing family-name" onChange={handleInputChange} />
 										</div>
 									</div>
 									<div className="space-y-2">
-										<Label htmlFor="billingAddress">Adresa</Label>
-										<Input
-											id="billingAddress"
-											name="billingAddress"
-											autoComplete="billing street-address"
-											onChange={handleInputChange}
-										/>
+										<Label htmlFor="address">Adresa</Label>
+										<Input id="address" name="address" autoComplete="billing street-address" onChange={handleInputChange} />
 									</div>
 									<div className="grid gap-4 sm:grid-cols-3">
 										<div className="space-y-2">
-											<Label htmlFor="billingCity">Mesto</Label>
-											<Input
-												id="billingCity"
-												name="billingCity"
-												autoComplete="billing address-level2"
-												onChange={handleInputChange}
-											/>
+											<Label htmlFor="city">Mesto</Label>
+											<Input id="city" name="city" autoComplete="billing address-level2" onChange={handleInputChange} />
 										</div>
 										<div className="space-y-2">
-											<Label htmlFor="billingState">Štát</Label>
-											<Input
-												id="billingState"
-												name="billingState"
-												autoComplete="billing address-level1"
-												onChange={handleInputChange}
-											/>
+											<Label htmlFor="state">Štát</Label>
+											<Input id="state" name="state" autoComplete="billing address-level1" onChange={handleInputChange} />
 										</div>
 										<div className="space-y-2">
-											<Label htmlFor="billingZip">ZIP Kód</Label>
-											<Input
-												id="billingZip"
-												name="billingZip"
-												autoComplete="billing postal-code"
-												onChange={handleInputChange}
-											/>
+											<Label htmlFor="zip">ZIP Kód</Label>
+											<Input id="zip" name="zip" autoComplete="billing postal-code" onChange={handleInputChange} />
 										</div>
 									</div>
 								</div>

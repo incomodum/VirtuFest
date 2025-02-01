@@ -95,7 +95,7 @@ export default function Page() {
 						</div>
 					</section>
 
-					<section className="relative flex justify-center bg-muted px-4">
+					<section className="relative flex justify-center border-t px-4">
 						<div className="container flex flex-col items-center gap-8 pt-12 pb-8 lg:flex-row">
 							<div className="flex aspect-video w-full items-center justify-center md:justify-end lg:w-1/2">
 								<Image src="/revuca-erb.png" alt="Hero Image" width={325} height={525} className="rounded-lg object-cover" priority />
