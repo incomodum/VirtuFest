@@ -31,7 +31,7 @@ export default async function VendorDetailPage({ params }: { params: Promise<{ i
 							<div className="flex items-center">
 								<Star className="h-5 w-5 fill-yellow-400 text-yellow-400" />
 								<span className="ml-1 font-medium">{data.rating}</span>
-								<span className="ml-1 text-muted-foreground">({data.reviewCount} reviews)</span>
+								<span className="ml-1 text-muted-foreground">({data.reviewCount} recenzie)</span>
 							</div>
 						</div>
 
@@ -63,8 +63,8 @@ export default async function VendorDetailPage({ params }: { params: Promise<{ i
 						{/* Tabs */}
 						<Tabs defaultValue="events" className="w-full">
 							<TabsList>
-								<TabsTrigger value="events">Events</TabsTrigger>
-								<TabsTrigger value="reviews">Reviews</TabsTrigger>
+								<TabsTrigger value="events">Udalosti</TabsTrigger>
+								<TabsTrigger value="reviews">Recenzie</TabsTrigger>
 							</TabsList>
 							<TabsContent value="events">
 								<VendorEvents events={data.events} />
@@ -79,22 +79,22 @@ export default async function VendorDetailPage({ params }: { params: Promise<{ i
 					<div className="space-y-6">
 						<Card>
 							<CardHeader>
-								<CardTitle>Quick Information</CardTitle>
+								<CardTitle>Základné informácie</CardTitle>
 							</CardHeader>
 							<CardContent className="space-y-4">
 								<div className="flex items-center gap-2">
 									<Calendar className="size-4 text-muted-foreground" />
-									<span>Member since {new Date(data.memberSince).getFullYear()}</span>
+									<span>Stánkarom od {new Date(data.memberSince).getFullYear()}</span>
 								</div>
 								<div className="flex items-center gap-2">
 									<MapPin className="size-4 text-muted-foreground" />
-									<span>Participates in local fairs</span>
+									<span>Účasť na miestnych jarmokoch</span>
 								</div>
 							</CardContent>
 						</Card>
 						<Card>
 							<CardHeader>
-								<CardTitle>Upcoming Fairs</CardTitle>
+								<CardTitle>Nadchádzajúce jarmoky</CardTitle>
 							</CardHeader>
 							<CardContent className="space-y-4">
 								{data.events
@@ -111,7 +111,7 @@ export default async function VendorDetailPage({ params }: { params: Promise<{ i
 												{event.location}
 											</div>
 											<Button variant="outline" asChild className="w-full">
-												<Link href={`/fairs/${event.fairId}`}>View Fair Details</Link>
+												<Link href={`/fairs/${event.fairId}`}>Zobraziť detaily o udalosti</Link>
 											</Button>
 										</div>
 									))}
@@ -119,7 +119,7 @@ export default async function VendorDetailPage({ params }: { params: Promise<{ i
 						</Card>
 						<Card>
 							<CardHeader>
-								<CardTitle>Contact Information</CardTitle>
+								<CardTitle>Kontakt</CardTitle>
 							</CardHeader>
 							<CardContent className="space-y-2">
 								<div className="flex items-center gap-2">
@@ -138,7 +138,7 @@ export default async function VendorDetailPage({ params }: { params: Promise<{ i
 									<div className="flex items-center gap-2">
 										<Globe className="size-4 text-muted-foreground" />
 										<a href={data.website} target="_blank" rel="noopener noreferrer" className="hover:underline">
-											Website
+											Webstránka
 										</a>
 									</div>
 								)}

@@ -17,7 +17,7 @@ export const vendors: VendorDetail[] = [
 			instagram: "remeselnedielne",
 			twitter: "remeselnedielne"
 		},
-		images: ["/placeholder.svg", "/placeholder.svg", "/placeholder.svg", "/placeholder.svg"],
+		images: ["/dielna1.jpg", "/dielna4.jpg", "/dielna3.jpeg", "/dielna2.jpg"],
 		rating: 4.8,
 		reviewCount: 124,
 		memberSince: "2020-01-15",
