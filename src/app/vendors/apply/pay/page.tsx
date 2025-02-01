@@ -10,33 +10,6 @@ import { Separator } from "@/components/ui/separator"
 import { Button } from "@/components/ui/button"
 import { ApplePay, GooglePay, MasterCard, TatraPay, Visa } from "./icons"
 
-export const cartItems = [
-	{
-		id: 1,
-		name: "Premium Cotton T-Shirt",
-		variant: "White / Large",
-		price: 29.99,
-		quantity: 2,
-		image: "/placeholder.svg?height=96&width=96"
-	},
-	{
-		id: 2,
-		name: "Classic Denim Jeans",
-		variant: "Blue / 32x32",
-		price: 79.99,
-		quantity: 1,
-		image: "/placeholder.svg?height=96&width=96"
-	},
-	{
-		id: 3,
-		name: "Running Sneakers",
-		variant: "Black / US 10",
-		price: 119.99,
-		quantity: 1,
-		image: "/placeholder.svg?height=96&width=96"
-	}
-]
-
 export default function Payment() {
 	const [formData, setFormData] = useState({
 		email: "",
