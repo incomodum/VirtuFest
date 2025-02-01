@@ -26,11 +26,11 @@ export function VendorMap({ fair }: VendorMapProps) {
 		<div className="space-y-4">
 			<div className="flex flex-wrap gap-4">
 				{Object.entries({
-					food: "Food & Beverages",
-					crafts: "Arts & Crafts",
-					retail: "Retail",
-					services: "Services",
-					other: "Other"
+					food: "Remeselníci"
+					// crafts: "Arts & Crafts",
+					// retail: "Retail",
+					// services: "Services",
+					// other: "Other"
 				}).map(([type, label]) => (
 					<div key={type} className="flex items-center gap-2">
 						<div className="h-4 w-4 rounded-full" style={{ backgroundColor: getVendorTypeColor(type) }} />

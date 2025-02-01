@@ -73,7 +73,7 @@ export const vendors: VendorDetail[] = [
 	{
 		id: 2,
 		businessName: "Sladké Pochúťky",
-		type: "jedlo",
+		type: "Občerstvenie",
 		description: "Čerstvo pečené dobroty a pečivo",
 		email: "pochutky@example.com",
 		boothNumber: "B2",
@@ -87,6 +87,124 @@ export const vendors: VendorDetail[] = [
 		reviews: [],
 		memberSince: "",
 		verified: true
+	},
+	{
+		id: 3,
+		businessName: "Drevené Čary",
+		description:
+			"Vyrábame ručne vyrezávané drevené predmety, od dekorácií po praktické domáce potreby. Každý kus je unikátny a nesie v sebe kúsok prírody. Naše výrobky sú vyrábané s láskou k drevu a tradíciám.",
+		type: "Umenie a remeslá",
+		ownerName: "Peter Kováč",
+		email: "peter@drevenecary.sk",
+		phone: "(555) 234-5678",
+		website: "https://drevenecary.sk",
+		socialMedia: {
+			facebook: "drevenecary",
+			instagram: "drevenecary",
+			twitter: "drevenecary"
+		},
+		images: ["/placeholder.svg", "/placeholder.svg", "/placeholder.svg", "/placeholder.svg"],
+		rating: 4.9,
+		reviewCount: 98,
+		memberSince: "2019-03-22",
+		verified: true,
+		boothNumber: "B3",
+		reviews: [
+			{
+				id: 1,
+				rating: 5,
+				comment: "Krásne drevené výrobky, ktoré oživia každý domov.",
+				author: "Anna Nováková",
+				date: "2024-02-01"
+			},
+			{
+				id: 2,
+				rating: 4,
+				comment: "Skvelá práca s drevom, veľmi originálne nápady.",
+				author: "Ján Horváth",
+				date: "2024-01-25",
+				response: "Ďakujeme za podporu! Tešíme sa, že sa vám naše výrobky páčia."
+			}
+		],
+		events: [
+			{
+				id: 1,
+				fairId: 1,
+				fairName: "Jarný jarmok remesiel",
+				date: "2024-04-15",
+				location: "Centrum, Revúca",
+				boothNumber: "B2",
+				status: "upcoming"
+			},
+			{
+				id: 2,
+				fairId: 2,
+				fairName: "Letný festival trhov",
+				date: "2024-06-20",
+				location: "Riverside Park, Revúca",
+				boothNumber: "A4",
+				status: "upcoming"
+			}
+		]
+	},
+	{
+		id: 4,
+		businessName: "Plátno a Nit",
+		description:
+			"Šijeme ručne vyrobené textilné výrobky, ako sú vrecká, obaly na knihy, dekorácie a oblečenie. Každý kus je vytvorený s dôrazom na kvalitu a jedinečný dizajn. Naše výrobky sú ideálne pre tých, ktorí hľadajú niečo špeciálne.",
+		type: "Umenie a remeslá",
+		ownerName: "Eva Horváthová",
+		email: "eva@platnonit.sk",
+		phone: "(555) 345-6789",
+		website: "https://platnonit.sk",
+		socialMedia: {
+			facebook: "platnonit",
+			instagram: "platnonit",
+			twitter: "platnonit"
+		},
+		images: ["/placeholder.svg", "/placeholder.svg", "/placeholder.svg", "/placeholder.svg"],
+		rating: 4.7,
+		reviewCount: 112,
+		memberSince: "2021-07-10",
+		verified: true,
+		boothNumber: "C3",
+		reviews: [
+			{
+				id: 1,
+				rating: 5,
+				comment: "Krásne a kvalitné textilné výrobky, veľmi odporúčam!",
+				author: "Zuzana Kováčová",
+				date: "2024-01-20"
+			},
+			{
+				id: 2,
+				rating: 4,
+				comment: "Milé a originálne vrecká, ideálne na darčeky.",
+				author: "Martin Král",
+				date: "2024-01-12",
+				response: "Ďakujeme za vašu spätnú väzbu! Tešíme sa, že sa vám naše výrobky páčia."
+			}
+		],
+		events: [
+			{
+				id: 1,
+				fairId: 1,
+				fairName: "Jarný jarmok remesiel",
+				date: "2024-04-15",
+				location: "Centrum, Revúca",
+				boothNumber: "C3",
+				status: "upcoming"
+			},
+			{
+				id: 2,
+				fairId: 3,
+				fairName: "Zimný jarmok",
+				date: "2023-12-10",
+				location: "Hlavné námestie, Revúca",
+				boothNumber: "D1",
+				status: "completed"
+			}
+		]
 	}
 ]
 

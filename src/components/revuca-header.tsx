@@ -16,7 +16,7 @@ import {
 } from "@/components/ui/navigation-menu"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
-import { Menu, Tent } from "lucide-react"
+import { Menu } from "lucide-react"
 
 const fairs = [
 	{
@@ -146,11 +146,10 @@ function MobileNav() {
 	return (
 		<div className="grid gap-6 p-4">
 			<Link href="/" className="flex items-center space-x-2 font-bold text-lg">
-				<Tent className="h-5 w-5" />
-				<span>VirtuFest</span>
+				<Image src="/logoRevuca.svg" alt="logo" width={200} height={50} />
 			</Link>
 			<div className="grid gap-4">
-				<h4 className="font-medium">Fairs</h4>
+				<h4 className="font-medium">Udalosti</h4>
 				<div className="grid gap-2">
 					{fairs.map((fair) => (
 						<Link
@@ -164,7 +163,7 @@ function MobileNav() {
 				</div>
 			</div>
 			<div className="grid gap-4">
-				<h4 className="font-medium">Vendors</h4>
+				<h4 className="font-medium">Stánkari</h4>
 				<div className="grid gap-2">
 					{vendors.map((vendor) => (
 						<Link
@@ -179,14 +178,14 @@ function MobileNav() {
 			</div>
 			<div className="grid gap-2">
 				<Link href="/about" className={cn("text-muted-foreground hover:text-foreground", pathname === "/about" && "text-foreground")}>
-					About
+					O nás
 				</Link>
 				<Link href="/contact" className={cn("text-muted-foreground hover:text-foreground", pathname === "/contact" && "text-foreground")}>
-					Contact
+					Kontakt
 				</Link>
 			</div>
 			<Button asChild>
-				<Link href="/vendors/apply">Become a Vendor</Link>
+				<Link href="/vendors/apply">Staň sa stánkarom</Link>
 			</Button>
 		</div>
 	)

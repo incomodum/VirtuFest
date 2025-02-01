@@ -37,14 +37,14 @@ export default async function DataPage({ params }: { params: Promise<{ id: strin
 							{/* Event Details */}
 							<Card>
 								<CardHeader>
-									<CardTitle>Event Details</CardTitle>
+									<CardTitle>Detaily udalosti</CardTitle>
 								</CardHeader>
 								<CardContent>
 									<div className="grid gap-4 sm:grid-cols-2">
 										<div className="flex items-center gap-2">
 											<CalendarDays className="h-5 w-5 text-muted-foreground" />
 											<div>
-												<p className="font-medium">Dates</p>
+												<p className="font-medium">Dátumy</p>
 												<p className="text-muted-foreground text-sm">
 													{new Date(data.date).toLocaleDateString()} - {new Date(data.endDate).toLocaleDateString()}
 												</p>
@@ -53,22 +53,24 @@ export default async function DataPage({ params }: { params: Promise<{ id: strin
 										<div className="flex items-center gap-2">
 											<Clock className="h-5 w-5 text-muted-foreground" />
 											<div>
-												<p className="font-medium">Hours</p>
+												<p className="font-medium">Hodiny</p>
 												<p className="text-muted-foreground text-sm">{data.hours}</p>
 											</div>
 										</div>
 										<div className="flex items-center gap-2">
 											<MapPin className="h-5 w-5 text-muted-foreground" />
 											<div>
-												<p className="font-medium">Location</p>
+												<p className="font-medium">Lokalita</p>
 												<p className="text-muted-foreground text-sm">{data.location}</p>
 											</div>
 										</div>
 										<div className="flex items-center gap-2">
 											<Users className="h-5 w-5 text-muted-foreground" />
 											<div>
-												<p className="font-medium">Expected Attendance</p>
-												<p className="text-muted-foreground text-sm">{data.expectedAttendance.toLocaleString()} visitors</p>
+												<p className="font-medium">Odhadovaní návštevníci</p>
+												<p className="text-muted-foreground text-sm">
+													{data.expectedAttendance.toLocaleString()} návštevníkov
+												</p>
 											</div>
 										</div>
 										<div className="flex items-center gap-2">
@@ -98,9 +100,9 @@ export default async function DataPage({ params }: { params: Promise<{ id: strin
 						{/* Sidebar */}
 						<div className="space-y-4">
 							<Button asChild variant="default" className="w-full">
-								<Link href="/vendors/apply">Vendor Application</Link>
+								<Link href="/vendors/apply">Rezervácia stánku</Link>
 							</Button>
-							<Card>
+							{/* <Card>
 								<CardHeader>
 									<CardTitle>Quick Links</CardTitle>
 								</CardHeader>
@@ -115,10 +117,10 @@ export default async function DataPage({ params }: { params: Promise<{ id: strin
 										Parking Information
 									</a>
 								</CardContent>
-							</Card>
+							</Card> */}
 							<Card>
 								<CardHeader>
-									<CardTitle>Calendar</CardTitle>
+									<CardTitle>Kalendár</CardTitle>
 								</CardHeader>
 								<CardContent>
 									<FairCalendar />

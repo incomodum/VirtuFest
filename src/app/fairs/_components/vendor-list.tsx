@@ -20,18 +20,16 @@ export function VendorList({ vendors }: VendorListProps) {
 	return (
 		<div className="space-y-4">
 			<div className="flex flex-row justify-between gap-4">
-				<Input placeholder="Search vendors..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} className="max-w-sm" />
+				<Input placeholder="Hľadať predajcov..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} className="max-w-sm" />
 				<Select name="fairId" required defaultValue="all">
 					<SelectTrigger className="max-w-xs">
 						<SelectValue placeholder="Category" />
 					</SelectTrigger>
 					<SelectContent>
-						<SelectItem value="all">All Categories</SelectItem>
-						<SelectItem value="food">Food & Beverages</SelectItem>
-						<SelectItem value="crafts">Arts & Crafts</SelectItem>
-						<SelectItem value="retail">Retail</SelectItem>
-						<SelectItem value="services">Services</SelectItem>
-						<SelectItem value="other">Other</SelectItem>
+						<SelectItem value="all">Všetky kategórie</SelectItem>
+						<SelectItem value="food">Občerstvenie</SelectItem>
+						<SelectItem value="crafts">Umenie a Remeslá</SelectItem>
+						<SelectItem value="services">Spotrebný tovar</SelectItem>
 					</SelectContent>
 				</Select>
 			</div>
@@ -39,9 +37,9 @@ export function VendorList({ vendors }: VendorListProps) {
 				<Table>
 					<TableHeader>
 						<TableRow>
-							<TableHead>Booth</TableHead>
-							<TableHead>Business Name</TableHead>
-							<TableHead>Type</TableHead>
+							<TableHead>Stánok</TableHead>
+							<TableHead>Názov</TableHead>
+							<TableHead>Typ</TableHead>
 						</TableRow>
 					</TableHeader>
 					<TableBody>

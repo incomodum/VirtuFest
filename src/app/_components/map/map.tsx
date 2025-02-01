@@ -78,7 +78,7 @@ export default function MapComponent() {
 		type: "fill",
 		source: "food",
 		paint: {
-			"fill-color": "#ef444488",
+			"fill-color": "#ef4444",
 			"fill-outline-color": "#ef4444"
 		}
 	}

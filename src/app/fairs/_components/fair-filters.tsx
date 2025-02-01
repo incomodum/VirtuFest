@@ -13,28 +13,28 @@ export function FairFilters() {
 			<PopoverTrigger asChild>
 				<Button variant="outline" className="w-auto">
 					<Filter className="mr-2 h-4 w-4" />
-					Filters
+					Filtre
 				</Button>
 			</PopoverTrigger>
 			<PopoverContent className="w-[300px]" align="end">
 				<div className="space-y-4">
 					<div className="space-y-2">
-						<h4 className="font-medium">Location</h4>
+						<h4 className="font-medium">Lokácia</h4>
 						<Select>
 							<SelectTrigger>
-								<SelectValue placeholder="Select state" />
+								<SelectValue placeholder="Výber mesta" />
 							</SelectTrigger>
 							<SelectContent>
-								<SelectItem value="ny">New York</SelectItem>
-								<SelectItem value="ca">California</SelectItem>
-								<SelectItem value="tx">Texas</SelectItem>
-								<SelectItem value="fl">Florida</SelectItem>
+								<SelectItem value="ba">Bratislava</SelectItem>
+								<SelectItem value="bb">Banská Bystrica</SelectItem>
+								<SelectItem value="pd">Prievidza</SelectItem>
+								<SelectItem value="pe">Partizánske</SelectItem>
 							</SelectContent>
 						</Select>
 					</div>
 					<Separator />
 					<div className="space-y-2">
-						<h4 className="font-medium">Price</h4>
+						<h4 className="font-medium">Cena</h4>
 						<div className="space-y-2">
 							<div className="flex items-center space-x-2">
 								<Checkbox id="free" />
@@ -42,7 +42,7 @@ export function FairFilters() {
 									htmlFor="free"
 									className="font-medium text-sm leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
 								>
-									Free Entry
+									Zadarmo vstupné
 								</label>
 							</div>
 							<div className="flex items-center space-x-2">
@@ -51,14 +51,14 @@ export function FairFilters() {
 									htmlFor="paid"
 									className="font-medium text-sm leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
 								>
-									Paid Entry
+									Platené vstupné
 								</label>
 							</div>
 						</div>
 					</div>
 					<Separator />
 					<div className="space-y-2">
-						<h4 className="font-medium">Features</h4>
+						<h4 className="font-medium">Funkcie</h4>
 						<div className="space-y-2">
 							<div className="flex items-center space-x-2">
 								<Checkbox id="family-friendly" />
@@ -66,7 +66,7 @@ export function FairFilters() {
 									htmlFor="family-friendly"
 									className="font-medium text-sm leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
 								>
-									Family Friendly
+									Vhodné pre rodiny
 								</label>
 							</div>
 							<div className="flex items-center space-x-2">
@@ -75,7 +75,7 @@ export function FairFilters() {
 									htmlFor="food-available"
 									className="font-medium text-sm leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
 								>
-									Food Available
+									Dostupné občerstvenie
 								</label>
 							</div>
 							<div className="flex items-center space-x-2">
@@ -84,7 +84,7 @@ export function FairFilters() {
 									htmlFor="parking"
 									className="font-medium text-sm leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
 								>
-									Free Parking
+									Zadarmo parkovanie
 								</label>
 							</div>
 							<div className="flex items-center space-x-2">
@@ -93,15 +93,15 @@ export function FairFilters() {
 									htmlFor="accessible"
 									className="font-medium text-sm leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
 								>
-									Wheelchair Accessible
+									Prístupné pre invalidné vozíky
 								</label>
 							</div>
 						</div>
 					</div>
 					<Separator />
 					<div className="flex justify-end gap-2">
-						<Button variant="outline">Reset</Button>
-						<Button>Apply Filters</Button>
+						<Button variant="outline">Resetovať</Button>
+						<Button>Použiť filtre</Button>
 					</div>
 				</div>
 			</PopoverContent>

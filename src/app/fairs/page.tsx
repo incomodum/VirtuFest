@@ -1,4 +1,4 @@
-import { CalendarDays, MapPin, Search, Tent, Users } from "lucide-react"
+import { CalendarDays, MapPin, Search, Store, Users } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
@@ -23,9 +23,11 @@ export default async function FairsPage() {
 						<Image src="/banner.svg" alt="Fairs background" fill className="object-cover brightness-50" priority />
 					</div>
 					<div className="container relative z-10 px-4 py-24 text-center md:py-32">
-						<h1 className="font-bold text-3xl text-white tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl">Discover Amazing Fairs</h1>
+						<h1 className="font-bold text-3xl text-white tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl">
+							Objavte úžasné kultúrne udalosti
+						</h1>
 						<p className="mx-auto mt-4 max-w-[700px] text-gray-200 text-lg">
-							Find and participate in the best local fairs, markets, and festivals in your area
+							Vyhľadajte a zúčastnite sa najlepších miestnych trhov, jarmokov a festivalov vo vašom okolí{" "}
 						</p>
 					</div>
 				</section>
@@ -37,7 +39,7 @@ export default async function FairsPage() {
 							<div className="flex flex-row gap-4">
 								<div className="relative flex-1">
 									<Search className="absolute top-3 left-2.5 h-4 w-4 text-muted-foreground" />
-									<Input placeholder="Search fairs..." className="min-w-xs pl-8" />
+									<Input placeholder="Hľadať udalosti..." className="min-w-xs pl-8" />
 								</div>
 							</div>
 							<div className="flex w-fit flex-row gap-4">
@@ -46,10 +48,10 @@ export default async function FairsPage() {
 										<SelectValue placeholder="Category" />
 									</SelectTrigger>
 									<SelectContent>
-										<SelectItem value="all">All Categories</SelectItem>
-										<SelectItem value="arts">Arts & Crafts</SelectItem>
-										<SelectItem value="food">Food & Drink</SelectItem>
-										<SelectItem value="market">Markets</SelectItem>
+										<SelectItem value="all">Všetky kategórie</SelectItem>
+										<SelectItem value="arts">Remeslá</SelectItem>
+										<SelectItem value="food">Občerstvenie</SelectItem>
+										<SelectItem value="market">Trhy</SelectItem>
 									</SelectContent>
 								</Select>
 								<Select defaultValue="upcoming">
@@ -57,9 +59,9 @@ export default async function FairsPage() {
 										<SelectValue placeholder="Status" />
 									</SelectTrigger>
 									<SelectContent>
-										<SelectItem value="upcoming">Upcoming</SelectItem>
-										<SelectItem value="ongoing">Ongoing</SelectItem>
-										<SelectItem value="completed">Completed</SelectItem>
+										<SelectItem value="upcoming">Nadchádzajúce</SelectItem>
+										<SelectItem value="ongoing">Prebiehajúce</SelectItem>
+										<SelectItem value="completed">Ukončené</SelectItem>
 									</SelectContent>
 								</Select>
 								<FairFilters />
@@ -80,7 +82,7 @@ export default async function FairsPage() {
 												<Image src={fair.image || "/placeholder.svg"} alt={fair.name} fill className="object-cover" />
 												{fair.featured && (
 													<Badge className="absolute top-2 right-2" variant="secondary">
-														Featured
+														Odporúčané
 													</Badge>
 												)}
 											</div>
@@ -99,18 +101,18 @@ export default async function FairsPage() {
 																{fair.location}, {fair.city}
 															</div>
 															<div className="flex items-center gap-1">
-																<Tent className="h-4 w-4" />
-																{fair.vendorCount} vendors
+																<Store className="h-4 w-4" />
+																{fair.vendorCount} stánkov
 															</div>
 															<div className="flex items-center gap-1">
 																<Users className="h-4 w-4" />
-																{fair.expectedAttendance.toLocaleString()} expected visitors
+																{fair.expectedAttendance.toLocaleString()} odhadovaní návštevníci
 															</div>
 														</div>
 														<p className="text-muted-foreground">{fair.description}</p>
 													</div>
 													<Button asChild className="bg-[#00B975] hover:bg-[#009861]">
-														<Link href={`/fairs/${fair.id}`}>View Details</Link>
+														<Link href={`/fairs/${fair.id}`}>Zobraziť detaily</Link>
 													</Button>
 												</div>
 											</div>
