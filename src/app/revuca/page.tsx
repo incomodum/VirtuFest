@@ -1,7 +1,7 @@
 import { Button } from "@//components/ui/button"
 import { Card, CardContent } from "@//components/ui/card"
 import SiteFooter from "@/components/site-footer"
-import { SiteHeader } from "@/components/site-header"
+import { SiteHeader } from "@/components/revuca-header"
 import { upcomingFairs } from "@/lib/mocks"
 import { CalendarDays, MapPin, Users, Store } from "lucide-react"
 import Image from "next/image"
@@ -17,15 +17,11 @@ export default function Page() {
 					<section className="relative flex justify-center px-4">
 						<div className="container flex flex-col items-center gap-8 pt-12 pb-8 lg:flex-row">
 							<div className="flex h-[50vh] w-full flex-col items-center justify-center space-y-4">
-								<Image src={"/logo.png"} alt="logo" width={500} height={200} />
+								<Image src={"/logoRevuca.svg"} alt="logo" width={700} height={200} />
 								<p className="text-center text-lg text-muted-foreground">
-									Objavte nadchádzajúce kultúrne udalosti, rezervujte si priestor pre predajcov a staňte sa súčasťou komunity.
+									Objavte nadchádzajúce kultúrne udalosti v <b>Revúcej</b>, rezervujte si priestor pre predajcov a staňte sa
+									súčasťou komunity.
 								</p>
-								<Link href="/fairs">
-									<Button size="lg" className="mt-4 h-12 bg-[#00B975] px-8 hover:bg-[#009861]">
-										Nájdi zaujímave udalosti!
-									</Button>
-								</Link>
 							</div>
 						</div>
 					</section>
@@ -38,7 +34,9 @@ export default function Page() {
 					{/* Upcoming Fairs Section */}
 					<section className="flex w-full justify-center px-4 py-16">
 						<div className="container">
-							<h2 className="mb-8 text-center font-bold text-3xl tracking-tight">Odporúčané nadchádzajúce udalosti</h2>
+							<h2 className="mb-8 text-center font-bold text-3xl tracking-tight">
+								Nadchádzajúce udalosti v <b>Revúcej</b>
+							</h2>
 							<div className="mx-auto max-w-4xl space-y-4">
 								{upcomingFairs.map((fair) => (
 									<Card key={fair.id}>
@@ -72,7 +70,7 @@ export default function Page() {
 													</div>
 												</div>
 												<Link href="/fairs/1">
-													<Button className="mt-4 bg-[#00B975] hover:bg-[#009861]">Zobraziť detaily</Button>
+													<Button className="mt-4">Zobraziť detaily</Button>
 												</Link>
 											</div>
 										</CardContent>
@@ -93,7 +91,7 @@ export default function Page() {
 							</div>
 							<div className="mt-8 flex items-center justify-center">
 								<Link href="/vendors/apply">
-									<Button className="bg-[#00B975] hover:bg-[#009861]">Stať sa stánkarom!</Button>
+									<Button>Stať sa stánkarom!</Button>
 								</Link>
 							</div>
 						</div>

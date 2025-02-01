@@ -71,7 +71,7 @@ export function SiteHeader() {
 												className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
 												href="/fairs"
 											>
-												<Image src={"/logo.png"} alt="logo" width={200} height={50} />
+												<Image src={"/logoRevuca.svg"} alt="logo" width={200} height={50} />
 											</a>
 										</NavigationMenuLink>
 									</li>
@@ -109,7 +109,7 @@ export function SiteHeader() {
 				</NavigationMenu>
 				<div className="flex flex-1 items-center justify-end space-x-4">
 					<nav className="flex items-center space-x-2">
-						<Button asChild variant="default" className="hidden bg-[#00B975] hover:bg-[#009861] md:inline-flex">
+						<Button asChild variant="default" className="hidden md:inline-flex">
 							<Link href="/auth/sign-in">Prihlásiť sa</Link>
 						</Button>
 						<Sheet>
@@ -133,8 +133,8 @@ export function SiteHeader() {
 function MainNav() {
 	return (
 		<div className="mr-4 flex">
-			<Link href="/" className="mr-6 flex items-center space-x-2">
-				<Image src={"/logo.png"} alt="logo" width={120} height={20} />
+			<Link href="/revuca" className="mr-6 flex items-center space-x-2">
+				<Image src={"/logoRevuca.svg"} alt="logo" width={200} height={20} />
 			</Link>
 		</div>
 	)

@@ -4,18 +4,18 @@ import type { VendorDetail } from "@/types/vendor"
 export const vendors: VendorDetail[] = [
 	{
 		id: 1,
-		businessName: "Artisan Crafts Co",
+		businessName: "Remeselné Dielne",
 		description:
-			"We specialize in handcrafted pottery and ceramics, creating unique pieces that bring beauty to everyday life. Each item is carefully made using traditional techniques passed down through generations.",
-		type: "Arts & Crafts",
+			"Špecializujeme sa na ručne vyrábanú keramiku a hrnčiarstvo, vytvárame jedinečné kúsky, ktoré prinášajú krásu do každodenného života. Každý výrobok je starostlivo vytvorený tradičnými technikami, ktoré sa odovzdávajú z pokolenia na pokolenie.",
+		type: "Umenie a remeslá",
 		ownerName: "Sarah Johnson",
-		email: "sarah@artisancrafts.co",
+		email: "sarah@remeselnedielne.sk",
 		phone: "(555) 123-4567",
-		website: "https://artisancrafts.co",
+		website: "https://remeselnedielne.sk",
 		socialMedia: {
-			facebook: "artisancraftsco",
-			instagram: "artisancraftsco",
-			twitter: "artisancraftsco"
+			facebook: "remeselnedielne",
+			instagram: "remeselnedielne",
+			twitter: "remeselnedielne"
 		},
 		images: ["/placeholder.svg", "/placeholder.svg", "/placeholder.svg", "/placeholder.svg"],
 		rating: 4.8,
@@ -27,24 +27,24 @@ export const vendors: VendorDetail[] = [
 			{
 				id: 1,
 				rating: 5,
-				comment: "Beautiful craftsmanship! The pottery pieces are absolutely stunning.",
+				comment: "Úžasné remeselné spracovanie! Keramika je naozaj ohromujúca.",
 				author: "Emily White",
 				date: "2024-01-15"
 			},
 			{
 				id: 2,
 				rating: 4,
-				comment: "Great quality products and friendly service.",
+				comment: "Skvelá kvalita a priateľský servis.",
 				author: "Michael Brown",
 				date: "2024-01-10",
-				response: "Thank you for your kind words! We're glad you enjoyed our products."
+				response: "Ďakujeme za vaše milé slová! Tešíme sa, že sa vám naše výrobky páčili."
 			}
 		],
 		events: [
 			{
 				id: 1,
 				fairId: 1,
-				fairName: "Spring Arts & Crafts Fair",
+				fairName: "Jarný jarmok remesiel",
 				date: "2024-04-15",
 				location: "Centrum, Revúca",
 				boothNumber: "A1",
@@ -53,18 +53,18 @@ export const vendors: VendorDetail[] = [
 			{
 				id: 2,
 				fairId: 2,
-				fairName: "Summer Market Festival",
+				fairName: "Letný festival trhov",
 				date: "2024-06-20",
-				location: "Riverside Park",
+				location: "Riverside Park, Revúca",
 				boothNumber: "B3",
 				status: "upcoming"
 			},
 			{
 				id: 3,
 				fairId: 3,
-				fairName: "Winter Wonderland Fair",
+				fairName: "Zimný jarmok",
 				date: "2023-12-10",
-				location: "City Square",
+				location: "Hlavné námestie, Revúca",
 				boothNumber: "C2",
 				status: "completed"
 			}
@@ -72,11 +72,10 @@ export const vendors: VendorDetail[] = [
 	},
 	{
 		id: 2,
-		businessName: "Sweet Treats Bakery",
-		type: "food",
-		// location: { x: 200, y: 150, space: "10x20" },
-		description: "Fresh baked goods and pastries",
-		email: "treats@example.com",
+		businessName: "Sladké Pochúťky",
+		type: "jedlo",
+		description: "Čerstvo pečené dobroty a pečivo",
+		email: "pochutky@example.com",
 		boothNumber: "B2",
 		ownerName: "Jozko Mrkvicka",
 		phone: "+421912345678",
@@ -94,11 +93,11 @@ export const vendors: VendorDetail[] = [
 export const upcomingFairs: FairDetail[] = [
 	{
 		id: 1,
-		name: "Spring Arts & Crafts Fair",
+		name: "Jarný jarmok remesiel",
 		date: "2024-04-15",
-		location: "Centrum",
-		image: "/placeholder.svg",
-		description: "Annual arts and crafts fair featuring local artisans",
+		location: "Centrum, Revúca",
+		image: "/remeslo.jpg",
+		description: "Ročný jarmok remesiel s miestnymi umelcami a remeselníkmi",
 		vendorSpaces: 50,
 		expectedAttendance: 5000,
 		featured: true,
@@ -111,11 +110,11 @@ export const upcomingFairs: FairDetail[] = [
 	},
 	{
 		id: 2,
-		name: "Summer Food Festival",
+		name: "Letný festival jedla",
 		date: "2024-06-20",
-		location: "Riverside Park",
-		image: "/placeholder.svg",
-		description: "Celebrating local cuisine and food vendors",
+		location: "Riverside Park, Revúca",
+		image: "/jedlo.jpg",
+		description: "Oslava miestnej kuchyne a stánkov s jedlom",
 		vendorSpaces: 75,
 		expectedAttendance: 8000,
 		featured: true,
@@ -128,11 +127,11 @@ export const upcomingFairs: FairDetail[] = [
 	},
 	{
 		id: 3,
-		name: "Autumn Harvest Market",
+		name: "Jesenný trh",
 		date: "2024-09-10",
-		location: "Downtown Square",
-		image: "/placeholder.svg",
-		description: "Seasonal produce and artisanal goods",
+		location: "Hlavné námestie, Revúca",
+		image: "/trh.webp",
+		description: "Sezónne produkty a remeselné výrobky",
 		vendorSpaces: 60,
 		expectedAttendance: 6000,
 		featured: true,
