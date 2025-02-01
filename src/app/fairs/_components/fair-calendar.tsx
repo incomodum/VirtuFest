@@ -11,53 +11,54 @@ interface Event {
 
 // Mock schedule data - in a real app, this would come from your backend
 const schedule: Record<string, Event[]> = {
-	"2024-04-15": [
-		{
-			time: "10:00 AM",
-			title: "Fair Opening Ceremony",
-			description: "Official opening with local officials"
-		},
-		{
-			time: "2:00 PM",
-			title: "Artisan Demonstration",
-			description: "Live pottery making demonstration"
-		},
-		{
-			time: "7:00 PM",
-			title: "Evening Concert",
-			description: "Local band performance"
+			"2024-04-15": [
+				{
+					time: "10:00",
+					title: "Slávnostné otvorenie jarmoku",
+					description: "Oficiálne otvorenie za účasti miestnych predstaviteľov"
+				},
+				{
+					time: "14:00",
+					title: "Ukážka remeselníckej práce",
+					description: "Živá ukážka výroby keramiky"
+				},
+				{
+					time: "19:00",
+					title: "Večerný koncert",
+					description: "Vystúpenie miestnej kapely"
+				}
+			],
+			"2024-04-16": [
+				{
+					time: "11:00",
+					title: "Kulinárska dielňa",
+					description: "Naučte sa od miestnych kuchárov"
+				},
+				{
+					time: "15:00",
+					title: "Výtvarná dielňa pre deti",
+					description: "Zábavné výtvarné aktivity pre deti"
+				},
+				{
+					time: "18:00",
+					title: "Degustácia jedál",
+					description: "Ochutnajte špeciality od našich predajcov jedál"
+				}
+			],
+			"2024-04-17": [
+				{
+					time: "10:00",
+					title: "Remeselnícka dielňa",
+					description: "Naučte sa tradičné remeselnícke techniky"
+				},
+				{
+					time: "16:00",
+					title: "Slávnostné ukončenie jarmoku",
+					description: "Ukončenie jarmoku a udeľovanie cien"
+				}
+			]
 		}
-	],
-	"2024-04-16": [
-		{
-			time: "11:00 AM",
-			title: "Cooking Workshop",
-			description: "Learn from local chefs"
-		},
-		{
-			time: "3:00 PM",
-			title: "Children's Art Workshop",
-			description: "Fun art activities for kids"
-		},
-		{
-			time: "6:00 PM",
-			title: "Food Tasting Event",
-			description: "Sample dishes from our food vendors"
-		}
-	],
-	"2024-04-17": [
-		{
-			time: "10:00 AM",
-			title: "Craft Workshop",
-			description: "Learn traditional crafting techniques"
-		},
-		{
-			time: "4:00 PM",
-			title: "Closing Ceremony",
-			description: "Fair closing and awards presentation"
-		}
-	]
-}
+
 
 export function FairCalendar() {
 	return (
