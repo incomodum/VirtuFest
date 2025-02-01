@@ -17,6 +17,7 @@ import {
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { Menu } from "lucide-react"
+import Logo from "@/app/_components/logo"
 
 const fairs = [
 	{
@@ -114,8 +115,8 @@ export function SiteHeader() {
 						</Button>
 						<Sheet>
 							<SheetTrigger asChild>
-								<Button variant="outline" size="icon" className="md:hidden">
-									<Menu className="h-5 w-5" />
+								<Button variant="ghost" size="icon" className="size-12 p-0 hover:bg-[#00B97522] md:hidden">
+									<Menu className="size-12" />
 									<span className="sr-only">Toggle menu</span>
 								</Button>
 							</SheetTrigger>
@@ -134,7 +135,7 @@ function MainNav() {
 	return (
 		<div className="mr-4 flex">
 			<Link href="/" className="mr-6 flex items-center space-x-2">
-				<Image src={"/logo.png"} alt="logo" width={120} height={20} />
+				<Logo className="mb-1 h-[20px] w-[120px]" />
 			</Link>
 		</div>
 	)
@@ -185,7 +186,7 @@ function MobileNav() {
 				</Link>
 			</div>
 			<Button asChild className="bg-[#00B975] hover:bg-[#009861]">
-				<Link href="/vendors/apply">Staň sa stánkarom</Link>
+				<Link href="/auth/sign-in">Prihlás sa</Link>
 			</Button>
 		</div>
 	)

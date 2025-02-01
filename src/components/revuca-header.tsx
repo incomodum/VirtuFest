@@ -17,6 +17,7 @@ import {
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { Menu } from "lucide-react"
+import Logo from "@/app/_components/logo"
 
 const fairs = [
 	{
@@ -133,8 +134,10 @@ export function SiteHeader() {
 function MainNav() {
 	return (
 		<div className="mr-4 flex">
-			<Link href="/revuca" className="mr-6 flex items-center space-x-2">
-				<Image src={"/logoRevuca.svg"} alt="logo" width={200} height={20} />
+			<Link href="/revuca" className="mr-6 flex items-center justify-center gap-2 font-medium">
+				<Logo className="mb-1 h-[20px] w-fit text-primary" />
+				<div className="h-[35px] w-[1px] bg-black" />
+				<p className="mb-1 h-[20px] text-[16px]">Revúca</p>
 			</Link>
 		</div>
 	)

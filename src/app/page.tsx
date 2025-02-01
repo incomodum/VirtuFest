@@ -6,6 +6,7 @@ import { upcomingFairs } from "@/lib/mocks"
 import { CalendarDays, MapPin, Users, Store } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
+import Logo from "./_components/logo"
 
 export default function Page() {
 	return (
@@ -16,8 +17,8 @@ export default function Page() {
 					{/* Hero Section */}
 					<section className="relative flex justify-center px-4">
 						<div className="container flex flex-col items-center gap-8 pt-12 pb-8 lg:flex-row">
-							<div className="flex h-[50vh] w-full flex-col items-center justify-center space-y-4">
-								<Image src={"/logo.png"} alt="logo" width={500} height={200} />
+							<div className="flex h-[50vh] w-full flex-col items-center justify-center space-y-4 px-4">
+								<Logo className="w-[80%] max-w-[500px]" />
 								<p className="text-center text-lg text-muted-foreground">
 									Objavte nadchádzajúce kultúrne udalosti, rezervujte si priestor pre predajcov a staňte sa súčasťou komunity.
 								</p>
@@ -38,7 +39,7 @@ export default function Page() {
 					{/* Upcoming Fairs Section */}
 					<section className="flex w-full justify-center px-4 py-16">
 						<div className="container">
-							<h2 className="mb-8 text-center font-bold text-3xl tracking-tight">Odporúčané nadchádzajúce udalosti</h2>
+							<h2 className="mb-8 text-center font-bold text-3xl tracking-tight">Odporúčané udalosti</h2>
 							<div className="mx-auto max-w-4xl space-y-4">
 								{upcomingFairs.map((fair) => (
 									<Card key={fair.id}>

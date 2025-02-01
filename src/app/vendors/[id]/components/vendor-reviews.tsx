@@ -27,7 +27,7 @@ export function VendorReviews({ reviews, rating, reviewCount }: VendorReviewsPro
 					))}
 				</div>
 				<div className="text-muted-foreground text-sm">Based on {reviewCount} reviews</div>
-				<Button className="mt-4">Write a Review</Button>
+				<Button className="mt-4 bg-[#00B975] hover:bg-[#009861]">Write a Review</Button>
 			</div>
 
 			{/* Reviews List */}

@@ -6,6 +6,7 @@ import { upcomingFairs } from "@/lib/mocks"
 import { CalendarDays, MapPin, Users, Store } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
+import LogoRevuca from "../_components/logo-revuca"
 
 export default function Page() {
 	return (
@@ -16,8 +17,8 @@ export default function Page() {
 					{/* Hero Section */}
 					<section className="relative flex justify-center px-4">
 						<div className="container flex flex-col items-center gap-8 pt-12 pb-8 lg:flex-row">
-							<div className="flex h-[50vh] w-full flex-col items-center justify-center space-y-4">
-								<Image src={"/logoRevuca.svg"} alt="logo" width={700} height={200} />
+							<div className="flex h-[50vh] w-full flex-col items-center justify-center space-y-4 px-4">
+								<LogoRevuca className="w-[80%] max-w-[500px]" />
 								<p className="text-center text-lg text-muted-foreground">
 									Objavte nadchádzajúce kultúrne udalosti v <b>Revúcej</b>, rezervujte si priestor pre predajcov a staňte sa
 									súčasťou komunity.

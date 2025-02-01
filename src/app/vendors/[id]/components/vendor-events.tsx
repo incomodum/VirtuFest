@@ -27,7 +27,7 @@ export function VendorEvents({ events }: VendorEventsProps) {
 									<div className="space-y-2">
 										<div className="flex items-center justify-between">
 											<h4 className="font-medium">{event.fairName}</h4>
-											<Badge>Booth {event.boothNumber}</Badge>
+											<Badge className="bg-[#00B975]">Booth {event.boothNumber}</Badge>
 										</div>
 										<div className="flex items-center gap-2 text-muted-foreground text-sm">
 											<Calendar className="h-4 w-4" />
@@ -37,7 +37,7 @@ export function VendorEvents({ events }: VendorEventsProps) {
 											<MapPin className="h-4 w-4" />
 											{event.location}
 										</div>
-										<Link href={`/fairs/${event.fairId}`} className="text-primary text-sm hover:underline">
+										<Link href={`/fairs/${event.fairId}`} className="text-[#00B975] text-sm hover:underline">
 											View Fair Details
 										</Link>
 									</div>
@@ -61,7 +61,7 @@ export function VendorEvents({ events }: VendorEventsProps) {
 									<div className="space-y-2">
 										<div className="flex items-center justify-between">
 											<h4 className="font-medium">{event.fairName}</h4>
-											<Badge variant="secondary">Booth {event.boothNumber}</Badge>
+											<Badge variant="secondary" className="bg-[#00B97566]">Booth {event.boothNumber}</Badge>
 										</div>
 										<div className="flex items-center gap-2 text-muted-foreground text-sm">
 											<Calendar className="h-4 w-4" />
