@@ -1,12 +1,7 @@
 "use client"
 
-import { Card, CardContent } from "@//components/ui/card"
-import type { FairDetail } from "@//types/fair"
-import { addDays, format } from "date-fns"
-
-interface FairCalendarProps {
-	fair: FairDetail
-}
+import { Card, CardContent } from "@/components/ui/card"
+import { format } from "date-fns"
 
 interface Event {
 	time: string
@@ -64,24 +59,14 @@ const schedule: Record<string, Event[]> = {
 	]
 }
 
-export function FairCalendar({ fair }: FairCalendarProps) {
-	const startDate = new Date(fair.date)
-	const endDate = new Date(fair.endDate)
-	const days = []
-	let currentDate = startDate
-
-	while (currentDate <= endDate) {
-		days.push(new Date(currentDate))
-		currentDate = addDays(currentDate, 1)
-	}
-
+export function FairCalendar() {
 	return (
 		<div className="space-y-8">
-			{days.map((day) => (
-				<div key={day.toISOString()} className="space-y-3">
+			{Object.entries(schedule).map(([day, events]) => (
+				<div key={new Date(day).toISOString()} className="space-y-3">
 					<h3 className="font-semibold text-lg text-muted-foreground">{format(day, "EEEE, MMMM d, yyyy")}</h3>
 					<div className="grid gap-4">
-						{schedule[format(day, "yyyy-MM-dd")]?.map((event) => (
+						{events?.map((event) => (
 							<Card key={event.description}>
 								<CardContent className="flex gap-4 p-4">
 									<div className="flex-shrink-0 font-medium text-muted-foreground text-sm">{event.time}</div>

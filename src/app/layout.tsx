@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 import { Geist, Geist_Mono } from "next/font/google"
 import "./globals.css"
-import { Toaster } from "@//components/ui/toaster"
+import { Toaster } from "@/components/ui/toaster"
 
 const geistSans = Geist({
 	variable: "--font-geist-sans",
@@ -15,7 +15,15 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
 	title: "VirtuFest",
-	description: "Your virtual fair and event companion"
+	description: "Your virtual fair and event companion",
+	openGraph: {
+		type: "website",
+		title: "VirtuFest",
+		description: "Your virtual fair and event companion"
+	},
+	twitter: {
+		card: "summary_large_image"
+	}
 }
 
 export default function RootLayout({

@@ -1,7 +1,7 @@
 "use client"
 
-import type { FairDetail } from "@//types/fair"
-import { TooltipProvider } from "@//components/ui/tooltip"
+import type { FairDetail } from "@/types/fair"
+import { TooltipProvider } from "@/components/ui/tooltip"
 import MapComponent from "@/app/_components/map/map"
 
 interface VendorMapProps {

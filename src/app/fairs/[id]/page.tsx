@@ -2,7 +2,7 @@ import { CalendarDays, Clock, MapPin, ParkingMeterIcon as Parking, Users } from 
 import { VendorMap } from "../_components/vendor-map"
 import { VendorList } from "../_components/vendor-list"
 import { FairCalendar } from "../_components/fair-calendar"
-import { Card, CardContent, CardHeader, CardTitle } from "@//components/ui/card"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
@@ -121,7 +121,7 @@ export default async function DataPage({ params }: { params: Promise<{ id: strin
 									<CardTitle>Calendar</CardTitle>
 								</CardHeader>
 								<CardContent>
-									<FairCalendar fair={data} />
+									<FairCalendar />
 								</CardContent>
 							</Card>
 						</div>

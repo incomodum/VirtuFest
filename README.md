@@ -5,7 +5,7 @@
     <picture>
         <source media="(prefers-color-scheme: dark)" srcset="./.github/logo-dark.svg">
         <source media="(prefers-color-scheme: light)" srcset="./.github/logo-light.svg">
-        <img alt="virtufest" src="./.github/logo-light.svg" width="50%"">
+        <img alt="virtufest" src="./.github/logo-light.svg" width="60%"">
     </picture>
 </p>
 

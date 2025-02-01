@@ -1,5 +1,5 @@
-import { Button } from "@//components/ui/button"
-import { Card, CardContent } from "@//components/ui/card"
+import { Button } from "@/components/ui/button"
+import { Card, CardContent } from "@/components/ui/card"
 import SiteFooter from "@/components/site-footer"
 import { SiteHeader } from "@/components/revuca-header"
 import { upcomingFairs } from "@/lib/mocks"

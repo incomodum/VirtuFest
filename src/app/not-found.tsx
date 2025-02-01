@@ -1,6 +1,5 @@
 import Link from "next/link"
-import { Store } from "lucide-react"
-import { Button } from "@//components/ui/button"
+import { Button } from "@/components/ui/button"
 import { SiteHeader } from "@/components/site-header"
 import SiteFooter from "@/components/site-footer"
 
@@ -10,7 +9,6 @@ export default function NotFound() {
 			<SiteHeader />
 			<div className="flex h-auto flex-grow flex-col items-center justify-center">
 				<div className="container flex flex-col items-center justify-center gap-4 px-4 text-center">
-					<Store className="h-12 w-12 text-muted-foreground" />
 					<h1 className="font-bold text-4xl">404 - Stránka sa nenašla</h1>
 					<p className="max-w-[600px] text-lg text-muted-foreground">
 						Ups! Stránka, ktorú hľadáte, sa zbalila a opustila veľtrh. Vrátime vás tam, kde je zábava!{" "}

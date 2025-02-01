@@ -36,8 +36,8 @@ export default async function FairsPage() {
 						<div className="flex flex-col justify-between gap-4 md:flex-row md:items-center">
 							<div className="flex flex-row gap-4">
 								<div className="relative flex-1">
-									<Search className="absolute top-2.5 left-2.5 h-4 w-4 text-muted-foreground" />
-									<Input placeholder="Search fairs..." className="pl-8" />
+									<Search className="absolute top-3 left-2.5 h-4 w-4 text-muted-foreground" />
+									<Input placeholder="Search fairs..." className="min-w-xs pl-8" />
 								</div>
 							</div>
 							<div className="flex w-fit flex-row gap-4">
