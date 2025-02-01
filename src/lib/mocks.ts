@@ -10,7 +10,7 @@ export const vendors: VendorDetail[] = [
 		type: "Umenie a remeslá",
 		ownerName: "Peter Kováč",
 		email: "peter.kovac@remeselnedielne.sk",
-		phone: "(555) 123-4567",
+		phone: "+421 955 123 456",
 		website: "https://remeselnedielne.sk",
 		socialMedia: {
 			facebook: "remeselnedielne",
@@ -96,7 +96,7 @@ export const vendors: VendorDetail[] = [
 		type: "Umenie a remeslá",
 		ownerName: "Martin Bárta",
 		email: "martin.barta@drevenecary.sk",
-		phone: "(555) 234-5678",
+		phone: "+421 952 345 678",
 		website: "https://drevenecary.sk",
 		socialMedia: {
 			facebook: "drevenecary",
@@ -155,7 +155,7 @@ export const vendors: VendorDetail[] = [
 		type: "Umenie a remeslá",
 		ownerName: "Eva Horváthová",
 		email: "horvathova@platnonit.sk",
-		phone: "(555) 345-6789",
+		phone: "+421 953 456 789",
 		website: "https://platnonit.sk",
 		socialMedia: {
 			facebook: "platnonit",
@@ -213,7 +213,7 @@ export const upcomingFairs: FairDetail[] = [
 		id: 1,
 		name: "Jarný jarmok remesiel",
 		date: "2024-04-15",
-		location: "Centrum, Revúca",
+		location: "Centrum",
 		image: "/remeslo.jpg",
 		description: "Ročný jarmok remesiel s miestnymi umelcami a remeselníkmi",
 		vendorSpaces: 50,
@@ -221,7 +221,7 @@ export const upcomingFairs: FairDetail[] = [
 		featured: true,
 		city: "Revúca",
 		vendors,
-		endDate: "",
+		endDate: "2024-04-18",
 		parkingInfo: "Ulica Sládkovičová",
 		vendorCount: 70
 	},
@@ -229,7 +229,7 @@ export const upcomingFairs: FairDetail[] = [
 		id: 2,
 		name: "Letný festival jedla",
 		date: "2024-06-20",
-		location: "Riverside Park, Revúca",
+		location: "Riverside Park",
 		image: "/jedlo.jpg",
 		description: "Oslava miestnej kuchyne a stánkov s jedlom",
 		vendorSpaces: 75,
@@ -237,7 +237,7 @@ export const upcomingFairs: FairDetail[] = [
 		featured: true,
 		city: "Revúca",
 		vendors,
-		endDate: "",
+		endDate: "2024-06-23",
 		parkingInfo: "Pri Tescu",
 		vendorCount: 70
 	},
@@ -245,7 +245,7 @@ export const upcomingFairs: FairDetail[] = [
 		id: 3,
 		name: "Jesenný trh",
 		date: "2024-09-10",
-		location: "Hlavné námestie, Revúca",
+		location: "Hlavné námestie",
 		image: "/trh.webp",
 		description: "Sezónne produkty a remeselné výrobky",
 		vendorSpaces: 60,
@@ -253,7 +253,7 @@ export const upcomingFairs: FairDetail[] = [
 		featured: true,
 		city: "Revúca",
 		vendors,
-		endDate: "",
+		endDate: "2024-09-12",
 		parkingInfo: "Sládkovičová a Tesco",
 		vendorCount: 70
 	}

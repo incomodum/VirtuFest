@@ -61,7 +61,7 @@ export default function Page() {
 												alt={fair.name}
 												width={200}
 												height={200}
-												className="rounded-lg object-cover sm:w-48"
+												className="h-[280px] w-full rounded-lg bg-muted object-cover sm:h-[152px] sm:w-48"
 											/>
 											<div className="flex-1 space-y-2">
 												<h3 className="font-bold text-xl">{fair.name}</h3>
@@ -73,7 +73,7 @@ export default function Page() {
 													</div>
 													<div className="flex items-center gap-1">
 														<MapPin className="h-4 w-4" />
-														{fair.location}
+														{fair.location}, {fair.city}
 													</div>
 													<div className="flex items-center gap-1">
 														<Store className="h-4 w-4" />
